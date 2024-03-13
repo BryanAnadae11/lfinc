@@ -1,0 +1,480 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+
+<head>
+    <base href="../">
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <!-- Fav Icon  -->
+    <link rel="icon" href="{% static 'lionhead.png' %}">
+    <!-- Page Title  -->
+    <title>LZFINCS - Deposit</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- StyleSheets  -->
+    <link rel="stylesheet" href="{% static 'dash/dashlite.css' %}">
+    <link id="skin-default" rel="stylesheet" href="{% static 'dash/theme.css' %}">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- Include the plugin's CSS and JS: -->
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
+
+
+</head>
+<div id="google_translate_element"></div>
+                            <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                                }
+                            </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    <script src="//code.tidio.co/oyp3suzv9yc5nwh9swbuycudpypmgufm.js" async></script>
+<body class="nk-body bg-lighter npc-default has-sidebar ">
+<div class="nk-app-root">
+    <!-- main @s  -->
+    <div class="nk-main ">
+        <!-- sidebar @s  -->
+        <div class="nk-sidebar nk-sidebar-fixed is-dark " data-content="sidebarMenu">
+            <div class="nk-sidebar-element nk-sidebar-head">
+                <div class="nk-sidebar-brand">
+                    <a href="{% url 'home' %}" class="logo-link nk-sidebar-logo">
+
+<img decoding="async" src="{% static 'Evercore_logo.png' %}" alt="LZFINCS" class="logo_defaults" style="height: 60px; width: 150px;">                    </a>
+                </div>
+                <div class="nk-menu-trigger mr-n2">
+                    <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="glyphicon glyphicon-home"></em></a>
+                    <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex" data-target="sidebarMenu"><em class="glyphicon glyphicon-align-justify"></em></a>
+                </div>
+            </div><!-- .nk-sidebar-element -->
+            <div class="nk-sidebar-element">
+                <div class="nk-sidebar-content">
+                    <div class="nk-sidebar-menu" data-simplebar>
+                        <ul class="nk-menu">
+                            <li class="nk-menu-heading">
+                                <h6 class="overline-title text-primary-alt">Member Account</h6>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'dashboard' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-home"></em></span>
+                                    <span class="nk-menu-text">Dashboard</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'myreferals' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-user"></em></span>
+                                    <span class="nk-menu-text">Affiliate</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-heading">
+                                <h6 class="overline-title text-primary-alt">Finance</h6>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{% url 'deposit' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-usd"></em></span>
+                                    <span class="nk-menu-text">Buy Contract</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'withdrawal' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-credit-card"></em></span>
+                                    <span class="nk-menu-text">Withdrawal</span>
+                                </a>
+                            </li><!-- .nk-menu-item --><!-- .nk-menu-item --><!-- .nk-menu-item -->
+                            <li class="nk-menu-item">
+                                <a href="{% url 'loan' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-usd"></em></span>
+                                    <span class="nk-menu-text">Loan</span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'history' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-file"></em></span>
+                                    <span class="nk-menu-text">History</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                            <!-- .nk-menu-item -->
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'plans' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-file"></em></span>
+                                    <span class="nk-menu-text">Investment Plans</span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'notifications' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-file"></em></span>
+                                    <span class="nk-menu-text"> Notifications</span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-heading">
+                                <h6 class="overline-title text-primary-alt">Settings</h6>
+                            </li><!-- .nk-menu-item -->
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'account_settings' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-wrench"></em></span>
+                                    <span class="nk-menu-text">KYC Verification</span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item has-sub">
+                                <a href="{% url 'logout' %}" class="nk-menu-link">
+                                    <span class="nk-menu-icon"><em class="glyphicon glyphicon-off"></em></span>
+                                    <span class="nk-menu-text">Logout</span>
+                                </a>
+                            </li><!-- .nk-menu-item -->
+                        </ul><!-- .nk-menu -->
+                    </div><!-- .nk-sidebar-menu -->
+                </div><!-- .nk-sidebar-content -->
+            </div><!-- .nk-sidebar-element -->
+        </div>
+        <!-- sidebar @e  -->
+        <!-- wrap @s  -->
+        <div class="nk-wrap ">
+            <!-- main header @s  -->
+            <div class="nk-header nk-header-fixed is-light">
+                <div class="container-fluid">
+                    <div class="nk-header-wrap">
+                        <div class="nk-menu-trigger d-xl-none ml-n1">
+                            <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="glyphicon glyphicon-align-justify"></em></a>
+                        </div>
+                        <div class="nk-header-brand d-xl-none">
+                            <a href="{% url 'dashboard' %}" class="logo-link">
+<img decoding="async" src="{% static 'Evercore_logo.png' %}" alt="LZFINCS" class="logo_defaults" style="height: 60px; width: 150px;">                            </a>
+                        </div><!-- .nk-header-brand -->
+                        <div class="nk-header-tools">
+                            <ul class="nk-quick-nav">
+                                <li class="dropdown user-dropdown">
+                                    <a href="#" class="dropdown-toggle mr-n1" data-toggle="dropdown">
+                                        <div class="user-toggle">
+                                            <div class="user-avatar sm">
+                                                <em class="glyphicon glyphicon-user"></em>
+                                            </div>
+                                            <div class="user-info d-none d-xl-block">
+                                                                                                <div class="user-name dropdown-indicator">{{request.user.username}}</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                                        <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
+                                            <div class="user-card">
+                                                <div class="user-avatar">
+                                                    <span><em class="glyphicon glyphicon-user"></em></span>
+                                                </div>
+                                                <div class="user-info">
+                                                    <span class="lead-text">{{request.user.username}}</span>
+                                                    <span class="sub-text">{{request.user.email}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-inner">
+                                            <ul class="link-list">
+                                                <li><a href="{% url 'account_settings' %}"><em class="glyphicon glyphicon-user"></em><span>View Profile</span></a></li>
+                                                <li><a href="{% url 'deposit' %}"><em class="glyphicon glyphicon-usd"></em><span>Deposit</span></a></li>
+                                                <li><a href="{% url 'withdrawal' %}"><em class="glyphicon glyphicon-credit-card"></em><span>Withdraw</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown-inner">
+                                            <ul class="link-list">
+                                                <li><a href="{% url 'logout' %}"><em class="glyphicon glyphicon-off"></em><span>Sign out</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- .nk-header-wrap -->
+                </div><!-- .container-fliud -->
+            </div>
+            <!-- main header @s  -->
+            <div class="nk-header nk-header-fixed is-light">
+                <div class="container-fluid">
+                    <div class="nk-header-wrap">
+                        <div class="nk-menu-trigger d-xl-none ml-n1">
+                            <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="glyphicon glyphicon-align-justify"></em></a>
+                        </div>
+                        <div class="nk-header-brand d-xl-none">
+                            <a href="{% url 'dashboard' %}" class="logo-link">
+<img decoding="async" src="{% static 'Evercore_logo.png' %}" alt="LZFINCS" class="logo_defaults" style="height: 60px; width: 150px;">                            </a>
+                        </div><!-- .nk-header-brand -->
+                        <div class="nk-header-tools">
+                            <ul class="nk-quick-nav">
+                                <li class="dropdown user-dropdown">
+                                    <a href="#" class="dropdown-toggle mr-n1" data-toggle="dropdown">
+                                        <div class="user-toggle">
+                                            <div class="user-avatar sm">
+                                                <em class="icon ni ni-user-alt"></em>
+                                            </div>
+                                            <div class="user-info d-none d-xl-block">
+
+                                                                                                <div class="user-name dropdown-indicator">{{request.user.username}}</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                                        <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
+                                            <div class="user-card">
+                                                <div class="user-avatar">
+                                                    <span><em class="icon ni ni-user-alt"></em></span>
+                                                </div>
+                                                <div class="user-info">
+                                                    <span class="lead-text">{{request.user.username}}</span>
+                                                    <span class="sub-text">{{ request.user.email }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown-inner">
+                                            <ul class="link-list">
+                                                <li><a href="{% url 'account_settings' %}"><em class="glyphicon glyphicon-user"></em><span>View Profile</span></a></li>
+                                                <li><a href="{% url 'deposit' %}"><em class="glyphicon glyphicon-usd"></em><span>Deposit</span></a></li>
+                                                <li><a href="{% url 'withdrawal' %}"><em class="glyphicon glyphicon-credit-card"></em><span>Withdraw</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="dropdown-inner">
+                                            <ul class="link-list">
+                                                <li><a href="{% url 'logout' %}"><em class="glyphicon glyphicon-off"></em><span>Sign out</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- .nk-header-wrap -->
+                </div><!-- .container-fliud -->
+            </div>
+            <!-- main header @e  -->
+            <!-- content @s  -->
+                <div class="nk-content ">
+        <div class="container-fluid">
+            <div class="nk-content-inner">
+                <div class="nk-content-body">
+                    <div class="components-preview wide-md mx-auto">
+                        <div class="nk-block-head nk-block-head-lg wide-sm">
+                            <div class="nk-block-head-content">
+                                <div class="nk-block-head-sub"><a class="back-to" href="{% url 'dashboard' %}"><em class="glyphicon glyphicon-align-justify"></em><span>Dashboard</span></a></div>
+                                <h2 class="nk-block-title fw-normal">LZFINCS</h2>
+                                <p>You can choose to invest in any plan under LZFINCS. Kindly note that all contracts come with a 30-day return on investment (ROI) period.</p>
+                                <div class="nk-block-des">
+                                    <p class="lead"></p>
+                                </div>
+                            </div>
+                        </div><!-- .nk-block -->
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-lg-12 mb-5">
+                                                <form id="invest-form" name="form-validation" method="POST" action="" enctype="multipart/form-data">
+                                                    {% csrf_token %}
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="validation-username">Select Investment</label>
+<script type="text/javascript">
+    $('#example-multiple-optgroups').multiselect();
+</script>
+<select name="investment_plan" id="plan example-multiple-optgroups" class="form-control" required>
+    <optgroup label="Investing and Saving: Minimum deposit - $5000">
+        <option value="0.05#Retirement">Retirement (ROI : 5%)</option>
+        <option value="0.03#Saving for child">Saving for child (ROI : 3%)</option>
+        <option value="0.02#Health Insurance">Health Insurance (ROI : 2%)</option>
+        <option value="0.02#Life Insurance">Life Insurance (ROI : 2%)</option>
+    </optgroup>
+     <optgroup label="Crypto Trading: Minimum deposit - $1000">
+        <option value="0.04#Litecoin">Litecoin (ROI : 4%)</option>
+        <option value="0.05#Ethereum">Ethereum (ROI : 4%)</option>
+        <option value="0.05#XRP">XRP (ROI : 4%)</option>
+        <option value="0.02#Bitcoin Cash">Bitcoin Cash (ROI : 4%)</option>
+        <option value="0.04#Tron">Tron (ROI : 4%)</option>
+        <option value="0.04#Solana">Solana (ROI : 4%)</option>
+        <option value="0.05#Ethereum Classic">Ethereum Classic (ROI : 4%)</option>
+        <option value="0.07#Bitcoin">Bitcoin (ROI : 4%)</option>
+        <option value="0.04#Cardano">Cardano (ROI : 4%)</option>
+        <option value="0.04#Dogecoin">Dogecoin (ROI : 4%)</option>
+        <option value="0.04#Polkadot">Polkadot (ROI : 4%)</option>
+    </optgroup>
+     <optgroup label="Stocks and ETF's: Minimum Deposit - $1000">
+        <option value="0.10#Apple(AAPL)">Apple(AAPL) (ROI : 10%)</option>
+        <option value="0.10#Microsoft(MSFT)">Microsoft(MSFT) (ROI : 10%)</option>
+        <option value="0.08#Amazon(AMZN)">Amazon(AMZN) (ROI : 8%)</option>
+        <option value="0.06#NVIDIA(NVDA)">NVIDIA(NVDA) (ROI : 6%)</option>
+        <option value="0.10#Tesla(TSLA)">Tesla(TSLA) (ROI : 10%)</option>
+        <option value="0.06#META">META (ROI : 6%)</option>
+        <option value="0.09#Berkshire Hathaway(BRK.B)">Berkshire Hathaway(BRK.B) (ROI : 9%)</option>
+        <option value="0.05#UnitedHealth Group (UNH)">UnitedHealth Group (UNH) (ROI : 5%)</option>
+        <option value="0.05#Johnson & Johnson (JNJ)">Johnson & Johnson (JNJ) (ROI : 5%)</option>
+        <option value="0.06#JPMorgan Chase (JPM)">JPMorgan Chase (JPM) (ROI : 6%)</option>
+        <option value="0.06#Exxon Mobil (XOM)">Exxon Mobil (XOM) (ROI : 6%)</option>
+        <option value="0.03#Visa Class A (V)">Visa Class A (V) (ROI : 3%)</option>
+        <option value="0.04#Procter & Gamble (PG)">Procter & Gamble (PG) (ROI : 4%)</option>
+        <option value="0.05#Mastercard Class A (MA)">Mastercard Class A (MA) (ROI : 5%)</option>
+        <option value="0.03#Chevron Corporation (CVX)">Chevron Corporation (CVX) (ROI : 3%)</option>
+        <option value="0.03#PepsiCo (PEP)">PepsiCo (PEP) (ROI : 3%)</option>
+        <option value="0.03#Costco (COST)">Costco (COST) (ROI : 3%)</option>
+        <option value="0.05#Coca-Cola Company (KO)">Coca-Cola Company (KO) (ROI : 5%)</option>
+    </optgroup>
+     <optgroup label="Real Estate: Minimum Deposit - $10,000">
+        <option value="0.07#Prologis">Prologis (ROI : 7%)</option>
+        <option value="0.10#Annaly Capital Management">Annaly Capital Management (ROI : 10%)</option>
+        <option value="0.07#AGNC Investment Corp">AGNC Investment Corp (ROI : 7%)</option>
+        <option value="0.10#Crown Castle International">Crown Castle International (ROI : 10%)</option>
+        <option value="0.05#VICI properties">VICI properties (ROI : 5%)</option>
+        <option value="0.15#Klepierre">Klepierre (ROI : 15%)</option>
+        <option value="0.10#Link REIT">Link REIT (ROI : 10%)</option>
+        <option value="0.15#Gecina">Gecina (ROI : 15%)</option>
+        <option value="0.10#Ascendas REIT">Ascendas REIT (ROI : 10%)</option>
+        <option value="0.07#Alstria Office REIT AG">Alstria Office REIT AG (ROI : 7%)</option>
+        <option value="0.08#Shaftesbury plc">Shaftesbury plc (ROI : 8%)</option>
+        <option value="0.07#Aedifica SA">Aedifica SA (ROI : 7%)</option>
+        <option value="0.15#SEGRO plc">SEGRO plc (ROI : 15%)</option>
+    </optgroup>
+     <optgroup label="Agriculture: Minimum Deposit - $5000">
+        <option value="0.08#Archer-Daniels-Midland Co. (NYSE: ADM)">Archer-Daniels-Midland Co. (NYSE: ADM) (ROI : 8%)</option>
+        <option value="0.06#Deere & Company. (NYSE: DE)">Deere & Company. (NYSE: DE) (ROI : 6%)</option>
+        <option value="0.08#Tractor Supply Company (NASDAQ: TSCO)">Tractor Supply Company (NASDAQ: TSCO) (ROI : 8%)</option>
+        <option value="0.05#The Mosaic Company (NYSE: MOS)">The Mosaic Company (NYSE: MOS) (ROI : 5%)</option>
+        <option value="0.06#Bunge Limited (NYSE: BG)">Bunge Limited (NYSE: BG) (ROI : 6%)</option>
+        <option value="0.015#AGCO Corporation (NYSE: AGCO)">AGCO Corporation (NYSE: AGCO) (ROI : 15%)</option>
+        <option value="0.08#CF Industries Holdings Inc. (NYSE: CF)">CF Industries Holdings Inc. (NYSE: CF) (ROI : 8%)</option>
+        <option value="0.10#FMC Corp. (NYSE: FMC)">FMC Corp. (NYSE: FMC) (ROI : 10%)</option>
+        <option value="0.05#AppHarvest Inc. (NASDAQ: APPH)">AppHarvest Inc. (NASDAQ: APPH) (ROI : 5%)</option>
+        <option value="0.08#Weyerhaeuser Co. (NYSE: WY)">Weyerhaeuser Co. (NYSE: WY) (ROI : 8%)</option>
+        <option value="0.06#Tyson Foods Inc. (NYSE: TSN)">Tyson Foods Inc. (NYSE: TSN) (ROI : 6%)</option>
+        <option value="0.06#Philip Morris International Inc. (NYSE: PM)">Philip Morris International Inc. (NYSE: PM) (ROI : 6%)</option>
+    </optgroup>
+     <optgroup label="Renewable energy: Minimum Deposit - $1000">
+        <option value="0.10#NextEra Energy, Inc.(NEE)">NextEra Energy, Inc.(NEE) (ROI : 10%)</option>
+        <option value="0.15#First Solar, Inc.(FSLR)">First Solar, Inc.(FSLR) (ROI : 15%)</option>
+        <option value="0.08#Enphase Energy, Inc.(ENPH)">Enphase Energy, Inc.(ENPH) (ROI : 8%)</option>
+        <option value="0.10#Brookfield Renewable Partners L.P.(BEP)">Brookfield Renewable Partners L.P.(BEP) (ROI : 10%)</option>
+        <option value="0.08#Vestas Wind Systems A/S(VWS.CO)">Vestas Wind Systems A/S(VWS.CO) (ROI : 8%)</option>
+        <option value="0.15#Orsted A/S (ORSTED.CO)">Orsted A/S (ORSTED.CO) (ROI : 15%)</option>
+        <option value="0.10#Canadian Solar Inc.(CSIQ)">Canadian Solar Inc.(CSIQ) (ROI : 10%)</option>
+        <option value="0.06#SunPower Corporation(SPWR)">SunPower Corporation(SPWR) (ROI : 6%)</option>
+        <option value="0.10#SolarEdge Technologies, Inc.(SEDG)">SolarEdge Technologies, Inc.(SEDG) (ROI : 10%)</option>
+    </optgroup>
+     <optgroup label="Oil and Gas: Minimum Deposit - $5000">
+        <option value="0.07#Petronas">Petronas (ROI : 7%)</option>
+        <option value="0.05#Qatar Petroleum">Qatar Petroleum (ROI : 5%)</option>
+        <option value="0.06#Pemex">Pemex (ROI : 6%)</option>
+        <option value="0.05#PTT Public Company">PTT Public Company (ROI : 5%)</option>
+        <option value="0.08#PT Pertamina">PT Pertamina (ROI : 8%)</option>
+        <option value="0.08#Gazprom">Gazprom (ROI : 8%)</option>
+        <option value="0.05#Sonangol">Sonangol (ROI : 5%)</option>
+        <option value="0.07#Ecopetrol S.A">Ecopetrol S.A (ROI : 7%)</option>
+        <option value="0.10#China Petrochemical Corporation">China Petrochemical Corporation (ROI : 10%)</option>
+        <option value="0.10#Sonatrach">Sonatrach (ROI : 10%)</option>
+    </optgroup>
+</select>
+
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="validation-username">Prefered Deposit amount in USD</label>
+                                                        <input id="percentage"
+                                                            class="form-control"
+                                                            type="number"
+                                                            name="price_amount"
+                                                            rquired
+                                                        />
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="form-label" for="validation-username">Select preferred cryptocurrency for payment</label>
+                                                        <select type="text" class="form-control " name="pay_currency" id="validation-username" required>
+                                                        <option value="USDTTRC20">USD Tether TRC20 (USDTTRC20)</option>
+                                                        <option value="USDTERC20">USD Tether ERC20 (USDTERC20)</option>
+                                                        <option value="USDTBSC">USDTBSC</option>
+                                                        <option value="btc">Bitcoin (BTC)</option>
+                                                        <option value="eth">Ethereum (ETH)</option>
+                                                        <option value="doge">Dogecoin (DOGE)</option>
+                                                        <option value="trx">Tron (TRX)</option>
+                                                        <option value="sol">Solana (SOL)</option>
+                                                        <option value="ltc">Litecoin (LTC)</option>
+                                                        <option value="dot">Polkadot (DOT)</option>
+                                                        <option value="XLM">Steller Lumens (XLM)</option>
+                                                        <option value="ADA">Cardano (ADA)</option>
+                                                        <option value="axs">Axie Infinity (AXS)</option>
+                                                        <option value="floki">Floki (floki)</option>
+                                                        <option value="busderc20">Binance usd (BUSD ERC20)</option>
+                                                        <option value="dash">Dash (DASH)</option>
+                                                        <option value="etc">Ethereum classic (ETC)</option>
+                                                        <option value="xmr">Monero (XMR)</option>
+                                                        <option value="bnbbsc">Binance coin (BNBBSC)</option>
+                                                        <option value="shib">Shiba Inu (shib)</option>
+                                                        <option value="bch">Bitcoin cash (BCH)</option>
+                                                        <option value="xrp">Ripple (XRP)</option>
+                                                        </select>
+                                                    </div>
+
+                                                   <div class="form-actions">
+                                                        <input style="width:100%;" type="submit" class="btn btn-primary" value="Buy Contract">
+                                                    </div>
+                                                    <br>
+
+                                            <a href="{% url 'otherpayment' %}" type="" class="btn btn-warning btn-block">
+                                               pay with paypal
+                                            </a>
+                                            <a href="{% url 'otherpayment' %}" type="" class="btn btn-warning btn-block">
+                                               pay with Visacard
+                                            </a>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- .components-preview -->
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-29fc0be ob-is-e3" data-id="29fc0be" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                        <div class="elementor-element elementor-element-b6386cd ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="b6386cd" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                                                <h4 class="elementor-heading-title elementor-size-default">Language
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="elementor-element elementor-element-0361105 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="0361105" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                            <div class="elementor-widget-container">
+                            <span class="elementor-heading-title elementor-size-default">We support your local languages. Change language below.
+                            </span>
+                                            </div>
+                                        </div>
+
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="{% static 'translate.google.com/translate_a/element.js' %}"></script>
+                                    </div>
+                                </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- content @e  -->
+        </div>
+        <!-- wrap @e  -->
+    </div>
+    <!-- main @e  -->
+</div>
+<!-- app-root @e  -->
+<!-- JavaScript -->
+<script src="{% static 'dash/bundle.js' %}"></script>
+<script src="{% static 'dash/scripts.js' %}"></script>
+<script src="{% static 'dash/chart-ecommerce.js' %}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</body>
+
+</html>
